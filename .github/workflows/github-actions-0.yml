@@ -1,9 +1,15 @@
-name: GitHub Action AppSweep
+# This workflow will initiate a Guardsquare AppSweep scan of your APK
+name: AppSweep mobile application security testing
 on: [push]
 jobs:
-  AppSweep-action:
+  appsweep-scan:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository code
-        uses: actions/checkout@v2
-      - run: ./gradlew uploadToAppSweepRelease --stacktrace
+      - uses: actions/checkout@master
+        with:
+          repository: ''
+
+      - uses: guardsquare/appsweep-action@main
+        env:
+          APPSWEEP_API_KEY: ${{ secrets.APPSWEEP_API_KEY }}
+          INPUT_FILE: ./app/build/outputs/apk/release/app-release-unsigned.apk
