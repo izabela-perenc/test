@@ -49,6 +49,3 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 }
 
-appsweep {
-    apiKey "gs_appsweep_ztvZwjh_3qh3lnG56mrR5ri74oT9Vr9GOPINGlVS"
-}
