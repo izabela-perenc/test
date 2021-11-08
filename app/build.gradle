@@ -50,6 +50,5 @@ dependencies {
 }
 
 appsweep {
-    apiKey "gs_appsweep_fumq6Sh_CI4ShnjCLr6uBcBW6fmVXMNKLVVjJSiZ"
-    baseURL "https://development.appsweep.guardsquare.com/"
+    apiKey "gs_appsweep_ztvZwjh_3qh3lnG56mrR5ri74oT9Vr9GOPINGlVS"
 }
