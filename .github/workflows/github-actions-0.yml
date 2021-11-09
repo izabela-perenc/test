@@ -13,4 +13,4 @@ jobs:
         run: echo APPSWEEP_API_KEY=\"$APPSWEEP_API_KEY\" > ./local.properties
         
       - name: Upload app to AppSweep with gradle
-      - run: ./gradlew uploadToAppSweepRelease
+        run: ./gradlew uploadToAppSweepRelease
