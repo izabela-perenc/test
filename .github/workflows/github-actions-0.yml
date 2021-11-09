@@ -8,6 +8,6 @@ jobs:
         uses: actions/checkout@v2
       - name: Access APOD_API_KEY
         env:
-            APOD_API_KEY: ${{ secrets.APOD_API_KEY }}
-        run: echo APOD_API_KEY=\"$APOD_API_KEY\" > ./local.properties
+            APOD_API_KEY: ${{ secrets.APPSWEEP_API_KEY }}
+        run: echo APPSWEEP_API_KEY=\"$APPSWEEP_API_KEY\" > ./local.properties
       - run: ./gradlew uploadToAppSweepRelease --stacktrace
