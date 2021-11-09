@@ -16,7 +16,7 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        buildConfigField ("String", "APPSWEEP_API_KEY", getApiKey())
+        buildConfigField ("String", "apsweep.apiKey", getApiKey())
     }
 
     buildTypes {

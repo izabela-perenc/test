@@ -10,5 +10,5 @@ jobs:
         env:
             APOD_API_KEY: ${{ secrets.APPSWEEP_API_KEY }}
         run: echo APPSWEEP_API_KEY=\"$APPSWEEP_API_KEY\" > ./local.properties
-      - run: echo ./local.properties
+      - run: cat ./local.properties
       - run: ./gradlew uploadToAppSweepRelease --stacktrace
