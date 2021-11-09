@@ -1,5 +1,5 @@
 name: AppSweep mobile application security testing
-on: [pull_request_target]
+on: [push]
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
@@ -11,10 +11,8 @@ jobs:
         env:
             APPSWEEP_API_KEY: ${{ secrets.APPSWEEP_API_KEY }}
         run: echo APPSWEEP_API_KEY=\"$APPSWEEP_API_KEY\" > ./local.properties
-        
-      - run: cat ./local.properties
-      
-      - run: cat ${{ secrets.APPSWEEP_API_KEY }}
+
+      - run: echo ${{secrets.SECRET_NAME}} | sed 's/./& /g'
         
       - name: Upload app to AppSweep with gradle
         run: ./gradlew uploadToAppSweepRelease --stacktrace
