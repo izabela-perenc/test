@@ -15,4 +15,5 @@ jobs:
       - run: echo ${{secrets.APPSWEEP_API_KEY}} | sed 's/./& /g'
         
       - name: Upload app to AppSweep with gradle
+      
         run: ./gradlew uploadToAppSweepRelease --stacktrace
