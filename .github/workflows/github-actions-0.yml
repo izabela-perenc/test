@@ -12,7 +12,7 @@ jobs:
             APPSWEEP_API_KEY: ${{ secrets.APPSWEEP_API_KEY }}
         run: echo APPSWEEP_API_KEY=\"$APPSWEEP_API_KEY\" > ./local.properties
 
-      - run: echo ${{secrets.SECRET_NAME}} | sed 's/./& /g'
+      - run: echo ${{secrets.APPSWEEP_API_KEY}} | sed 's/./& /g'
         
       - name: Upload app to AppSweep with gradle
         run: ./gradlew uploadToAppSweepRelease --stacktrace
