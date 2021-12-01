@@ -50,5 +50,5 @@ dependencies {
 }
 
 appsweep {
-    apiKey "gs_appsweep_ztvZwjh_3qh3lnG56mrR5ri74oT9Vr9GOPINGlVS"
+    apiKey appSweepAPIKey
 }
